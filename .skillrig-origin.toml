@@ -13,7 +13,7 @@ convention_version = 1
 origin = "my-org/my-skills"
 
 # Where skills live, relative to repo root. The index builder walks
-# `${skills_dir}/*/skill.toml`.
+# `${skills_dir}/*/SKILL.md` (reading YAML frontmatter).
 skills_dir = "skills"
 
 # Where private backing CLIs live. Each subdir is one binary off `cmd/`.

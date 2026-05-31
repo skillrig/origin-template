@@ -1,6 +1,21 @@
 ---
 name: terraform-plan-review
 description: Review a terraform plan for risk and drift before apply, flagging destructive changes, IAM/security-policy edits, and resources that will be replaced rather than updated.
+license: Proprietary
+metadata:
+  x-skillrig.namespace: my-org
+  x-skillrig.version: "1.4.0"
+  x-skillrig.convention-version: "1"
+  x-skillrig.topics: [platform-team, terraform, aws]
+  x-skillrig.requires:
+    - tool: oxid
+      version: ">=0.4.0"
+      source: my-org/my-skills
+      manager: mise
+    - tool: terraform
+      version: ">=1.6"
+      source: hashicorp/terraform
+      manager: mise
 ---
 
 # Terraform Plan Review
@@ -16,7 +31,7 @@ of a `terraform plan` (or `terraform show -json <planfile>`) before they apply.
 
 ## Prerequisites
 
-This skill depends on the backing CLIs declared in `skill.toml`:
+This skill depends on the following backing CLIs (declared in the SKILL.md frontmatter):
 
 - `terraform >= 1.6` — to produce machine-readable plan JSON.
 - `oxid >= 0.4.0` — the org's plan-risk analyzer (built in this origin's `cmd/`).

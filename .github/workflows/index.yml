@@ -1,6 +1,6 @@
 # index.json regeneration (architecture.md §2b, §9). The ONLY "write" the system
 # makes to the monorepo. Merge-triggered Action, not a human/agent verb. Walks
-# skills/*/skill.toml and emits the committed discovery artifact.
+# skills/*/SKILL.md (reading YAML frontmatter) and emits the committed discovery artifact.
 name: index
 
 on:
