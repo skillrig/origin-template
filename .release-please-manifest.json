@@ -1,4 +1,4 @@
 {
-  "cmd/oxid": "0.4.0",
+  "cmd/oxid": "0.5.0",
   "skills/terraform-plan-review": "1.4.0"
 }
